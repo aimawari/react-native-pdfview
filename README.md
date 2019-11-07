@@ -4,7 +4,7 @@
 
 ```
 $ npm install rn-fetch-blob aimawari/react-native-zoomable-view --save
-$ npm install react-native-pdfview --save
+$ npm install @aimawari/react-native-pdfview --save
 ```
 
 ### RN > 0.60 and above (Auto link)
@@ -15,7 +15,7 @@ $ npm install react-native-pdfview --save
 
 ```
 $ react-native link rn-fetch-blob
-$ react-native link react-native-pdfview
+$ react-native link @aimawari/react-native-pdfview
 ```
 
 ### **If you use RN 0.59.0 and above
