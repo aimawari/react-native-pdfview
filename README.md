@@ -39,7 +39,7 @@ android {
 <details>
   <summary>iOS</summary>
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-pdfview` and add `Pdfview.xcodeproj`
+2. Go to `node_modules` ➜ `@aimawari` ➜ `react-native-pdfview` and add `Pdfview.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libPdfview.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 </details>
@@ -53,21 +53,21 @@ android {
 
 2. Append the following lines to `android/settings.gradle`:
    ```
-   include ':react-native-pdfview'
-   project(':react-native-pdfview').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-pdfview/android')
+   include ':@aimawari_react-native-pdfview'
+   project(':@aimawari_react-native-pdfview').projectDir = new File(rootProject.projectDir, 	'../node_modules/@aimawari_react-native-pdfview/android')
    ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
    ```
-     compile project(':react-native-pdfview')
+      implementation project(':@aimawari_react-native-pdfview')
    ```
 </details>
 
 ## Usage
 
 ```javascript
-import Pdfview from 'react-native-pdfview';
+import Pdfview from '@aimawari/react-native-pdfview';
 
-export const PDFExample = () => {
+export default const PDFExample = () => {
   return (
     <Pdfview
       horizontal

@@ -3,11 +3,11 @@ require "json"
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
-  s.name         = "@aimawari/react-native-pdfview"
+  s.name         = "react-native-pdfview"
   s.version      = package["version"]
   s.summary      = package["description"]
   s.description  = <<-DESC
-                  @aimawari/react-native-pdfview
+                  react-native-pdfview
                    DESC
   s.homepage     = "https://github.com/aimawari/react-native-pdfview"
   s.license      = "MIT"
