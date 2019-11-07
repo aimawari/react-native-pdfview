@@ -1,5 +1,7 @@
 # React Native PDFView
 
+A react native pdf viewer component 
+
 ## Getting started
 
 ```
