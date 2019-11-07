@@ -1,0 +1,42 @@
+{
+  "name": "react-native-pdfview",
+  "title": "React Native Pdfview",
+  "version": "1.0.0",
+  "description": "A react native pdf viewer component ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimawari/react-native-pdfview.git",
+    "baseUrl": "https://github.com/aimawari/react-native-pdfview"
+  },
+  "keywords": [
+    "react-native",
+    "pdf",
+    "view",
+    "viewer",
+    "android",
+    "ios"
+  ],
+  "author": {
+    "name": "aimawari",
+    "url": "https://github.com/aimawari/"
+  },
+  "homepage": "https://github.com/aimawari/react-native-pdfview/",
+  "bugs": {
+    "url": "https://github.com/aimawari/react-native-pdfview/issues"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "prop-types": "^15.5.10",
+    "@dudigital/react-native-zoomable-view": "github:aimawari/react-native-zoomable-view"
+  },
+  "peerDependencies": {
+    "rn-fetch-blob": "^0.10.13"
+  }
+}
