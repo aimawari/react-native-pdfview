@@ -1,7 +1,7 @@
 {
   "name": "@aimawari/react-native-pdfview",
   "title": "React Native Pdfview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react native pdf viewer component ",
   "main": "index.js",
   "scripts": {
