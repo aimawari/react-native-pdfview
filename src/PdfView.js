@@ -16,7 +16,6 @@ export default class PdfView extends Component {
     zoom: 1,
     minZoom: 1,
     maxZoom: 2,
-    spacing: 10,
     style: {},
     horizontal: false,
     page: 1,
@@ -171,9 +170,19 @@ export default class PdfView extends Component {
           alignItems: 'center',
         }}
         onStartShouldSetResponder={() => true}
-        onResponderStart={() => (this._tapmillis = Date.now())}
-        onResponderRelease={() => {
-          if (this._tapmillis + 350 >= Date.now()) {
+        onResponderStart={evt => {
+          this._tapXY = {
+            x: evt.nativeEvent.locationX,
+            y: evt.nativeEvent.locationY,
+          };
+          this._tapmillis = Date.now();
+        }}
+        onResponderRelease={evt => {
+          if (
+            this._tapmillis + 350 >= Date.now() &&
+            this._tapXY.x === evt.nativeEvent.locationX &&
+            this._tapXY.y === evt.nativeEvent.locationY
+          ) {
             this._onItemSingleTap(index);
             this._tapmillis = 0;
           } else {
@@ -222,9 +231,9 @@ export default class PdfView extends Component {
         (this.props.horizontal === false &&
           this.props.orientation === Orientation.LANDSCAPE)
       ) {
-        return this.state.containerSize.width + this.props.spacing;
+        return this.state.containerSize.width;
       } else {
-        return this.state.containerSize.height + this.props.spacing;
+        return this.state.containerSize.height;
       }
     }
     return null;
@@ -239,12 +248,12 @@ export default class PdfView extends Component {
         (this.props.horizontal === false &&
           this.props.orientation === Orientation.LANDSCAPE)
       ) {
-        itemLength = this.state.containerSize.width + this.props.spacing;
+        itemLength = this.state.containerSize.width;
       } else {
-        itemLength = this.state.containerSize.height + this.props.spacing;
+        itemLength = this.state.containerSize.height;
       }
     } else {
-      itemLength = this._getPageStyle().width + this.props.spacing;
+      itemLength = this._getPageStyle().width;
     }
 
     return {
@@ -308,17 +317,6 @@ export default class PdfView extends Component {
           snapToInterval={this._snapTo()}
           decelerationRate="fast"
           getItemLayout={this._getItemLayout}
-          ItemSeparatorComponent={() => {
-            return (
-              <View
-                style={
-                  this.props.horizontal
-                    ? {width: this.props.spacing}
-                    : {height: this.props.spacing}
-                }
-              />
-            );
-          }}
         />
       </ReactNativeZoomableView>
     );

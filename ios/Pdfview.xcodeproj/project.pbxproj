@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		540087A82372CDBD00534DFC /* PdfUIViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 540087A72372CDBD00534DFC /* PdfUIViewManager.m */; };
-		540087AA2372CE4E00534DFC /* PdfUIViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540087A92372CE4E00534DFC /* PdfUIViewManager.swift */; };
-		540087AC2372D3C500534DFC /* PdfUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540087AB2372D3C500534DFC /* PdfUIView.swift */; };
+		546759602379104800495A3C /* PdfUIViewKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5467595F2379104800495A3C /* PdfUIViewKitManager.m */; };
+		546759622379172B00495A3C /* PdfUIViewKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546759612379172B00495A3C /* PdfUIViewKitManager.swift */; };
+		546759642379176B00495A3C /* PdfUIViewKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546759632379176B00495A3C /* PdfUIViewKit.swift */; };
+		546759682379184B00495A3C /* PdfUIViewPageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 546759672379184B00495A3C /* PdfUIViewPageManager.m */; };
+		5467596A2379186400495A3C /* PdfUIViewPageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546759692379186400495A3C /* PdfUIViewPageManager.swift */; };
+		5467596C237918D000495A3C /* PdfUIViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5467596B237918D000495A3C /* PdfUIViewPage.swift */; };
 		548494632371D579001BFDCA /* PdfParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548494622371D579001BFDCA /* PdfParser.swift */; };
 		548494652371E3CF001BFDCA /* PdfParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 548494642371E3CF001BFDCA /* PdfParser.m */; };
 /* End PBXBuildFile section */
@@ -28,9 +31,12 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libPdfview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPdfview.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		540087A72372CDBD00534DFC /* PdfUIViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PdfUIViewManager.m; sourceTree = "<group>"; };
-		540087A92372CE4E00534DFC /* PdfUIViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfUIViewManager.swift; sourceTree = "<group>"; };
-		540087AB2372D3C500534DFC /* PdfUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfUIView.swift; sourceTree = "<group>"; };
+		5467595F2379104800495A3C /* PdfUIViewKitManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PdfUIViewKitManager.m; sourceTree = "<group>"; };
+		546759612379172B00495A3C /* PdfUIViewKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfUIViewKitManager.swift; sourceTree = "<group>"; };
+		546759632379176B00495A3C /* PdfUIViewKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfUIViewKit.swift; sourceTree = "<group>"; };
+		546759672379184B00495A3C /* PdfUIViewPageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PdfUIViewPageManager.m; sourceTree = "<group>"; };
+		546759692379186400495A3C /* PdfUIViewPageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfUIViewPageManager.swift; sourceTree = "<group>"; };
+		5467596B237918D000495A3C /* PdfUIViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfUIViewPage.swift; sourceTree = "<group>"; };
 		548494612371D578001BFDCA /* Pdfview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pdfview-Bridging-Header.h"; sourceTree = "<group>"; };
 		548494622371D579001BFDCA /* PdfParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfParser.swift; sourceTree = "<group>"; };
 		548494642371E3CF001BFDCA /* PdfParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PdfParser.m; sourceTree = "<group>"; };
@@ -58,9 +64,12 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				540087AB2372D3C500534DFC /* PdfUIView.swift */,
-				540087A92372CE4E00534DFC /* PdfUIViewManager.swift */,
-				540087A72372CDBD00534DFC /* PdfUIViewManager.m */,
+				5467596B237918D000495A3C /* PdfUIViewPage.swift */,
+				546759692379186400495A3C /* PdfUIViewPageManager.swift */,
+				546759672379184B00495A3C /* PdfUIViewPageManager.m */,
+				546759632379176B00495A3C /* PdfUIViewKit.swift */,
+				546759612379172B00495A3C /* PdfUIViewKitManager.swift */,
+				5467595F2379104800495A3C /* PdfUIViewKitManager.m */,
 				548494642371E3CF001BFDCA /* PdfParser.m */,
 				548494622371D579001BFDCA /* PdfParser.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -152,11 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				540087AA2372CE4E00534DFC /* PdfUIViewManager.swift in Sources */,
-				540087A82372CDBD00534DFC /* PdfUIViewManager.m in Sources */,
+				546759642379176B00495A3C /* PdfUIViewKit.swift in Sources */,
+				546759622379172B00495A3C /* PdfUIViewKitManager.swift in Sources */,
+				5467596A2379186400495A3C /* PdfUIViewPageManager.swift in Sources */,
+				546759602379104800495A3C /* PdfUIViewKitManager.m in Sources */,
 				548494652371E3CF001BFDCA /* PdfParser.m in Sources */,
+				546759682379184B00495A3C /* PdfUIViewPageManager.m in Sources */,
+				5467596C237918D000495A3C /* PdfUIViewPage.swift in Sources */,
 				548494632371D579001BFDCA /* PdfParser.swift in Sources */,
-				540087AC2372D3C500534DFC /* PdfUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

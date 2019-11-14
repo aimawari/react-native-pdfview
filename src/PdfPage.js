@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import {View} from 'react-native';
 import {requireNativeComponent} from 'react-native';
 
-let PdfUIView = requireNativeComponent('PdfUIView', PdfPage, {
+let PdfUIView = requireNativeComponent('PdfUIViewPage', PdfPage, {
   nativeOnly: {},
 });
 

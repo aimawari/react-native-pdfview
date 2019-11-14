@@ -84,11 +84,6 @@ public class PdfUIViewManager extends SimpleViewManager<PdfUIView> {
         pdfUIView.setHorizontal(horizontal);
     }
 
-    @ReactProp(name = "spacing")
-    public void setSpacing(PdfUIView pdfUIView, int spacing) {
-        pdfUIView.setSpacing(spacing);
-    }
-
     @ReactProp(name = "password")
     public void setPassword(PdfUIView pdfUIView, String password) {
         pdfUIView.setPassword(password);

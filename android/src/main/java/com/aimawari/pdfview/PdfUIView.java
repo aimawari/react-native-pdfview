@@ -53,7 +53,6 @@ public class PdfUIView extends PDFView implements OnPageChangeListener,OnLoadCom
     private float zoom = 1;
     private float minZoom = 1;
     private float maxZoom = 3;
-    private int spacing = 10;
 
     private boolean horizontal = false;
     private boolean enablePaging = false;
@@ -95,7 +94,6 @@ public class PdfUIView extends PDFView implements OnPageChangeListener,OnLoadCom
                 .onTap(this)
                 .onDraw(this)
                 .onPageScroll(this)
-                .spacing(this.spacing)
                 .password(this.password)
                 .pageFitPolicy(this.fitPolicy)
                 .pageSnap(this.enablePaging)
@@ -232,10 +230,6 @@ public class PdfUIView extends PDFView implements OnPageChangeListener,OnLoadCom
 
     public void setHorizontal(boolean horizontal) {
         this.horizontal = horizontal;
-    }
-
-    public void setSpacing(int spacing) {
-        this.spacing = spacing;
     }
 
     public void setPassword(String password) {

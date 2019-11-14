@@ -1,15 +1,15 @@
 //
-//  PdfUIViewManager.swift
+//  PdfUIViePagewManager.swift
 //  Pdfview
 //
 //  Created by aimawari on 6/11/19.
 //  Copyright © 2019 Facebook. All rights reserved.
 //
 
-@objc(PdfUIViewManager)
-class PdfUIViewManager: RCTViewManager {
+@objc(PdfUIViewPageManager)
+class PdfUIViewPageManager: RCTViewManager {
     override func view() -> UIView! {
-        return PdfUIView()
+        return PdfUIViewPage()
     }
     
     override static func requiresMainQueueSetup() -> Bool {

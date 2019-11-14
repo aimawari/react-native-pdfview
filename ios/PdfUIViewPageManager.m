@@ -1,5 +1,5 @@
 //
-//  PdfUIViewManager.m
+//  PdfUIViewPageManager.m
 //  Pdfview
 //
 //  Created by aimawari on 6/11/19.
@@ -7,7 +7,7 @@
 //
 
 #import "React/RCTViewManager.h"
-@interface RCT_EXTERN_MODULE(PdfUIViewManager, RCTViewManager)
+@interface RCT_EXTERN_MODULE(PdfUIViewPageManager, RCTViewManager)
 
 // ============ React Props ============
 RCT_EXPORT_VIEW_PROPERTY(page, NSNumber)

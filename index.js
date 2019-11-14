@@ -12,6 +12,7 @@ import {
 import RNFetchBlob from 'rn-fetch-blob';
 
 import PdfView from './src/PdfView';
+import PdfViewKit from './src/PdfViewKit';
 import {Orientation} from './src/constant';
 
 const SHA256 = require('crypto-js/sha256');
@@ -24,7 +25,6 @@ export default class Pdf extends Component {
     zoom: 1,
     minZoom: 1,
     maxZoom: 3,
-    spacing: 10,
 
     enablePaging: false,
 
@@ -321,11 +321,23 @@ export default class Pdf extends Component {
               style={[styles.container, this.props.style]}
               path={this.state.path}
               onChange={this._onChange}
-              scale={this.props.zoom}
-              minScale={this.props.minScale}
-              maxScale={this.props.maxZoom}
-              onScaleChange={this.props.onZoomChange}
+              zoom={this.props.zoom}
+              minZoom={this.props.minZoom}
+              maxZoom={this.props.maxZoom}
+              onZoomChange={this.props.onZoomChange}
               orientation={this.state.orientation}
+            />
+          ) : parseInt(Platform.Version, 10) >= 11 ? (
+            <PdfViewKit
+              ref={component => (this._root = component)}
+              {...this.props}
+              style={[styles.container, this.props.style]}
+              path={this.state.path}
+              onChange={this._onChange}
+              zoom={this.props.zoom}
+              minZoom={this.props.minZoom}
+              maxZoom={this.props.maxZoom}
+              onZoomChange={this.props.onZoomChange}
             />
           ) : (
             <PdfView

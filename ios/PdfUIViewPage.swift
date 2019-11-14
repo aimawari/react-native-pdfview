@@ -1,5 +1,5 @@
 //
-//  PdfUIView.swift
+//  PdfUIViewPage.swift
 //  Pdfview
 //
 //  Created by aimawari on 6/11/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PdfUIView: UIView {
+class PdfUIViewPage: UIView {
     private var _page: Int = 1;
     
     @objc func setPage(_ page: NSNumber) {
