@@ -78,10 +78,10 @@ export default const PDFExample = () => {
           'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
       }}
       password=""
-      onLoadComplete={(numberOfPages, filePath) => {}}
+      onLoadComplete={(numberOfPages, path, size, toc) => {}}
       onPageChanged={(page, numberOfPages) => {}}
       onError={error => {}}
-      onPageSingleTap={() => {}}
+      onPageSingleTap={(page) => {}}
       style={{flex: 1, backgroundColor: 'transparent'}}
     />
   );
