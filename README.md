@@ -10,6 +10,7 @@ $ npm install @aimawari/react-native-pdfview --save
 ```
 
 Then add `maven { url "https://jitpack.io" }` to `repositories` inside `android/build.gradle`
+
 ```
 allprojects {
     repositories {
@@ -21,6 +22,7 @@ allprojects {
 
 <details>
   <summary>RN > 0.60 and above (Auto link)</summary>
+    
 ```
 $ cd ios && pod install
 ```
@@ -28,6 +30,7 @@ $ cd ios && pod install
 
 <details>
   <summary>RN <= 0.59 (*Require link)</summary>
+      
 ```
 $ react-native link rn-fetch-blob
 $ react-native link @aimawari/react-native-pdfview
@@ -36,7 +39,9 @@ $ react-native link @aimawari/react-native-pdfview
 
 <details>
   <summary>If you using RN 0.59.0 and above</summary>
-Please add this to your android/app/build.gradle**
+    
+Please add this to your `android/app/build.gradle`
+    
 ```diff
 android {
 +    packagingOptions {
@@ -55,6 +60,7 @@ android {
 
 <details>
   <summary>iOS</summary>
+    
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
 2. Go to `node_modules` ➜ `@aimawari` ➜ `react-native-pdfview` and add `Pdfview.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libPdfview.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
@@ -63,6 +69,7 @@ android {
 
 <details>
   <summary>Android</summary>
+    
 1. Open up `android/app/src/main/java/[...]/MainApplication.java`
 
 - Add `import com.aimawari.pdfview.PdfviewPackage;` to the imports at the top of the file
