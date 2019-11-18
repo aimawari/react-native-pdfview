@@ -1,6 +1,6 @@
 # React Native PDFView
 
-A react native pdf viewer component 
+A react native pdf viewer component
 
 ## Getting started
 
@@ -9,18 +9,33 @@ $ npm install rn-fetch-blob aimawari/react-native-zoomable-view --save
 $ npm install @aimawari/react-native-pdfview --save
 ```
 
-### RN > 0.60 and above (Auto link)
+Then add `maven { url "https://jitpack.io" }` to `repositories` inside `android/build.gradle`
+```
+allprojects {
+    repositories {
+       	...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
 
-`$ cd ios && pod install`
+<details>
+  <summary>RN > 0.60 and above (Auto link)</summary>
+```
+$ cd ios && pod install
+```
+</details>
 
-### RN <= 0.59 (*Require link)
-
+<details>
+  <summary>RN <= 0.59 (*Require link)</summary>
 ```
 $ react-native link rn-fetch-blob
 $ react-native link @aimawari/react-native-pdfview
 ```
+</details>
 
-### **If you use RN 0.59.0 and above
+<details>
+  <summary>If you using RN 0.59.0 and above</summary>
 Please add this to your android/app/build.gradle**
 ```diff
 android {
@@ -34,8 +49,10 @@ android {
 +    }
 }
 ```
+</details>
 
 ### Manual installation
+
 <details>
   <summary>iOS</summary>
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
@@ -60,7 +77,7 @@ android {
    ```
       implementation project(':@aimawari_react-native-pdfview')
    ```
-</details>
+   </details>
 
 ## Usage
 
@@ -87,3 +104,21 @@ export default const PDFExample = () => {
   );
 };
 ```
+
+## Changelog
+<details>
+  <summary>v1.1.1 (Bug fixed)</summary>
+  
+<b>ANDROID</b>
+  + Change pdf render plugin to use my folk.
+</details>
+
+<details>
+  <summary>v1.1.0</summary>
+  
+  <b>IOS</b>
+  + Add pdfKit support (ios >= 11)
+</details>
+
+## Note
++ IOS below than 11 currenly can't render `annotation` and get `table of contents`
